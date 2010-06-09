@@ -41,7 +41,10 @@ class LocationsController < ApplicationController
   # POST /locations.xml
   def create
     @location = Location.new(params[:location])
-
+    
+    ## Q: how to handle exception here, or add context info here? leave prompt?
+    ## A: 
+    
     respond_to do |format|
       if @location.save
         flash[:notice] = 'Location was successfully created.'
